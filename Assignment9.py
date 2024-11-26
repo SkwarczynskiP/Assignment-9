@@ -85,11 +85,11 @@ class Solution:
 
         return validSeats - len(match) // 2  # Return the number of seats minus the size of the matching
 
-    # Time Complexity: O(V * E^2)
+    # Time Complexity: O(V * E^2) where V represents the vertices, or valid seats, and E represents the edges, or edges
+    # between the seats.
     # This is because the algorithm uses the Ford-Fulkerson method to compute the maximum matching, which has a
-    # complexity of O(V * E^2) in the worst case. In this case, V is the number of valid seats and E is the number
-    # of edges between the seats. The graph construction portion of the algorithm has a complexity of O(VE) time,
-    # as we iterate over all the valid seats and their neighbors to build the graph. Each run of the BFS algorithm
-    # for augmenting paths has a complexity of O(E) time. These two parts of the algorithm combine to give a total
-    # complexity of O(V * E^2) time.
+    # complexity of O(V * E^2) in the worst case. The graph construction portion of the algorithm has a complexity of
+    # O(VE) time, as we iterate over all the valid seats and their neighbors to build the graph. Each run of the BFS
+    # algorithm for augmenting paths has a complexity of O(E) time. These two parts of the algorithm combine to give
+    # a total complexity of O(V * E^2) time.
     
